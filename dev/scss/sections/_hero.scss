@@ -1,0 +1,59 @@
+/* =============
+    Hero
+============= */
+
+.hero{
+
+    .content{
+
+
+        @include md{
+
+        
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas:
+        ". title ."
+        ". description ."
+        ". img ."
+        ;
+
+        }
+
+        .title{
+
+            @include md{
+                grid-area: title;
+            }
+            text-align: center;
+        
+        }
+
+        .description{
+
+            @include md{
+                grid-area: description;
+            }
+        
+        
+        }
+
+        .img{
+
+            @include md{
+                grid-area: img;
+            }
+        text-align: center;
+        
+        }
+
+
+
+    
+    
+    }
+
+}
+
+
+   

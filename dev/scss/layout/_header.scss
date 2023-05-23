@@ -1,0 +1,119 @@
+/* =============
+    Header
+============= */
+
+header{
+
+    background-color: $darkteal;
+    .content{
+
+
+    @include sm{
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas:
+        "locations newsletter"
+        "locations follow"
+        ;
+        }
+
+
+
+    @include md{
+        
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-template-areas:
+        "title menu search login"
+        ;
+        }
+
+    
+
+
+
+.title{
+
+    @include md{
+        grid-area: title;
+    }
+
+
+}
+
+.menu{
+
+    @include md{
+        grid-area: menu;
+    }
+
+    ul li{
+
+        display: inline-block;
+    }
+
+
+}
+
+.search{
+
+
+    @include md{
+        grid-area: search;
+    }
+
+    form{
+
+        display: flex;
+
+        input{
+            color: black;
+            font-size: 16px;
+            width: 100%;
+
+
+
+        @include md{
+            font-size: 35px;
+        }
+
+
+        }
+
+        ::placeholder{
+
+            color: lightgray;
+            opacity: 1;
+        }
+
+        button{
+
+        border: none;
+        padding-top: 6px;
+        
+        }
+
+    }
+
+
+}
+
+.login{
+
+    padding-left: 40px;
+
+    @include md{
+        grid-area: login;
+    }
+
+
+
+}
+
+a{
+    color: white;
+}
+
+    }
+    
+}   

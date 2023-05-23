@@ -1,0 +1,40 @@
+/* =============
+    Header2
+============= */
+
+.header2{
+
+    background-color: $teal;
+    .content{
+        @include md{
+        
+            display: grid;
+            grid-template-columns: 60% 1fr 1fr;
+            grid-template-areas:
+            ". buy cart"
+            ;
+            }
+
+            .buy{
+
+                @include md{
+                    grid-area: buy;
+                }
+
+
+            }
+
+            .cart{
+
+                @include md{
+                    grid-area: cart;
+                }
+
+
+            }
+
+    }
+
+
+
+}
