@@ -1,0 +1,60 @@
+/* =============
+    Features
+============= */
+
+.features{
+
+    .content{
+
+        
+
+        @include lg{
+            padding-left: 20%;
+        padding-right: 20%;
+            grid-template-columns: 16px auto 16px;
+            grid-template-areas:
+            ". toparea ."
+            ". featureslist ."
+            ;
+            }
+    
+
+        .toparea{
+        text-align: center;
+        @include lg{
+            grid-area: toparea;
+        }
+
+    }
+
+       .featureslist{
+        
+        color: white;
+        background-color: $darkteal;
+        padding: 8px;
+
+        @include lg{
+            
+            grid-area: featureslist;
+            
+        }
+
+        ul li{
+            list-style: none;
+        
+            
+        }
+        
+
+    }
+
+
+
+    }
+
+    
+
+
+
+
+}

@@ -1,0 +1,59 @@
+/* =============
+    Materials
+============= */
+
+.materials{
+
+    .content{
+
+        
+
+        @include lg{
+            padding-left: 20%;
+        padding-right: 20%;
+            grid-template-columns: 16px auto 16px;
+            grid-template-areas:
+            ". toparea ."
+            ". materialslist ."
+            ;
+            }
+    
+
+        .toparea{
+        text-align: center;
+        @include lg{
+            grid-area: toparea;
+        }
+
+    }
+
+       .materialslist{
+        
+        color: white;
+        background-color: $darkteal;
+        padding: 8px;
+        @include lg{
+            
+            grid-area: materialslist;
+            
+        }
+
+        ul li{
+            list-style: none;
+        
+            
+        }
+        
+
+    }
+
+
+
+    }
+
+    
+
+
+
+
+}

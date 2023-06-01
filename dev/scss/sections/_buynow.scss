@@ -1,8 +1,22 @@
 /* =============
-    Hero
+    Buy Now
 ============= */
 
-.hero{
+.buynow{
+
+button{
+
+background-color: $purple;
+    border: none;
+    padding: 4px;
+}
+
+a{
+    color: white;
+    padding: 4px;
+}
+    
+
 
     .content{
 
@@ -14,14 +28,14 @@
         grid-template-columns: 16px auto 16px;
         grid-template-areas:
         ". title ."
-        ". description ."
         ". img ."
+        ". button ."
         ;
 
         }
 
         .title{
-            color: $darkteal;
+
             @include md{
                 grid-area: title;
             }
@@ -29,20 +43,20 @@
         
         }
 
-        .description{
+        .img{
 
             @include md{
-                grid-area: description;
+                grid-area: img;
             }
             text-align: center;
         
         
         }
 
-        .img{
+        .button{
 
             @include md{
-                grid-area: img;
+                grid-area: button;
             }
         text-align: center;
         

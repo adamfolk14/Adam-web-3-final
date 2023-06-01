@@ -17,6 +17,17 @@
 
             .buy{
 
+                button{
+                    background-color: $purple;
+                        border: none;
+                        padding: 4px;
+                    }
+                    
+                    a{
+                        color: white;
+                        padding: 4px;
+                    }
+
                 @include md{
                     grid-area: buy;
                 }
@@ -25,6 +36,14 @@
             }
 
             .cart{
+
+
+                button{
+
+                    border: none;
+                    background-color: transparent;
+                    
+                }
 
                 @include md{
                     grid-area: cart;

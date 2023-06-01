@@ -15,8 +15,8 @@
     ". content ."
     ;
 
-    @include xl{
-        grid-template-columns: auto 1140px auto;
+    @include lg{
+        grid-template-columns: auto 1120px auto;
     }
 
     @include xxl{

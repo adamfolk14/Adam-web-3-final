@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    
     <title>Glowforge Pro</title>
   </head>
 
@@ -23,29 +27,36 @@
       </div>
 
 
-      <div class="menu">
+    <div class="menu">
 
-      <ul>
+<!-- Mobile Nav Icon, Won't Display on Desktop & Up-->
+<div class="burger-container">
+  <button id="burger-btn">
+      <i class="fa-solid fa-bars"></i>
+  </button>
+</div>
+<!-- End Mobile Nav Icon -->
 
-        <li>
-          <form action="#"> <button> Home </button> </form>
-        </li>
+<!-- Menu Alters Between Mobile/Tablet & Desktop-->
+<nav id="main-menu">
+  <div class="hide-for-lg">
+      <button id="close-btn">
+          <i class="fa-solid fa-xmark-large"></i>
+      </button> 
+  </div>
 
-        <li>
-          <form action="#"> <button> Features </button> </form>
-        </li>
+  <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Reviews</a></li>
+  </ul>
+</nav>
 
-        <li>
-          <form action="#"> <button> Gallery </button> </form>
-        </li>
-
-        <li>
-          <form action="#"> <button> Reviews </button> </form>
-        </li>
-
-
-      </ul>
-      </div>
+</div>
+<!--End Nav -->
+  
+      
 
       <div class="search">
         <form action="#">
@@ -71,7 +82,7 @@
   <div class="content">
 
 <div class="buy">
-<form> <button> Buy Pro Now! </button> </form>
+<button> <a href="html/checkout.html">Buy Pro Now!</a> </button>
 </div>
 
 <div class="cart">
@@ -85,7 +96,6 @@
 
 <!-- Hero -->
 <section class="hero">
-
   <div class="content">
 
     <div class="title">
@@ -99,33 +109,40 @@
     </div>
 
     <div class="img">
-    <img src="img/glowforge-bottom-image.jpg" alt="main image">
+    <img class="large-images" src="img/glowforge-bottom-image.jpg" alt="main image">
     </div>
   
-
-
-
 </div>
+</section>
 
 <!-- Gallery 1 -->
 
-<section>
+<section class="gallery1">
 
-<img src="img/glowforge-cropped.jpg" alt="glowforge cropped">
+<ul>
 
-<img src="img/glowforge-closeup.jpg" alt="glowforge close">
+<li class="img1"> <img class="large-images" src="img/glowforge-cropped.jpg" alt="glowforge cropped"> </li>
 
-<img src="img/glowforge-window.jpg" alt="glowforge window">
+<li class="img2"> <img class="large-images" src="img/glowforge-closeup.jpg" alt="glowforge close"> </li>
 
+<li class="img3"> <img class="large-images" src="img/glowforge-window.jpg" alt="glowforge window"> </li>
+
+</ul>
 
 </section>
 
 <!-- Features -->
 
+<section class="features">
+  <div class="content">
+
+<div class="toparea">
 <h2> Features of our product </h2>
 
 <p> These Include: </p>
+</div>
 
+<div class="featureslist">
 <ul>
   <li> 
     <p> <img src="img/bolt-icon.svg" alt="bolt"> 45 watt laser with the ability to cut very strong materials such as titanium and marble. </p> 
@@ -142,41 +159,61 @@
   <li> 
     <p> <img src="img/rocket-icon.svg" alt="rocket"> Very high speeds and built in cooling agent for extended use time. </p> 
   </li>
-
-
-
 </ul>
+</div>
 
+</div>
 
 </section>
 
 <!-- Reviews -->
+<section class="reviews">
 
-<section>
+  <div class="reviews-title"> 
+    <div class="container">
+      <div class="content">
+        <h2> Top Reviews </h2>
+      </div>
+    </div>
+  </div>
 
-<h2> Top Reviews </h2>
 
-<ul>
+<div class="review-boxes">
 
-<li>
-  <img src="img/profile-icon.svg" alt="profile icon">
-  <img src="img/rating.svg" alt="rating">
-  <p> “This product is fantastic and really helped my business!” <br/> John Carter </p>
-</li>
+<ul class="review-grid">
 
-<li>
-  <img src="img/profile-icon.svg" alt="profile icon">
-  <img src="img/rating.svg" alt="rating">
-  <p> “This product is fantastic and really helped my business!” <br/> John Carter </p>
-</li>
+  <li class="review-1">
+    <img class="large-images" src="img/profile-icon.svg" alt="profile icon">
+    <img class="large-images" src="img/rating.svg" alt="rating">
+    <div class="container"> 
+      <div class="content">
+        <p> “This product is fantastic and really helped my business!” <br/> John Carter </p>
+      </div>
+    </div>
+  </li>
 
-<li>
-  <img src="img/profile-icon.svg" alt="profile icon">
-  <img src="img/rating.svg" alt="rating">
-  <p> “This product is fantastic and really helped my business!” <br/> John Carter </p>
-</li>
+  <li class="review-2">
+    <img class="large-images" src="img/profile-icon.svg" alt="profile icon">
+    <img class="large-images" src="img/rating.svg" alt="rating">
+    <div class="container"> 
+      <div class="content">
+        <p> “This product is fantastic and really helped my business!” <br/> John Carter </p>
+      </div>
+    </div>
+  </li>
+
+  <li class="review-3">
+    <img class="large-images" src="img/profile-icon.svg" alt="profile icon">
+    <img class="large-images" src="img/rating.svg" alt="rating">
+    <div class="container"> 
+      <div class="content">
+        <p> “This product is fantastic and really helped my business!” <br/> John Carter </p>
+      </div>
+    </div>
+  </li>
 
 </ul>
+</div>
 
 <form action="#"> <button> See More </button> </form>
 
@@ -184,32 +221,33 @@
 
 <!-- Gallery 2 -->
 
-<section>
+<section class="gallery2">
 
+  <div class="text"> 
 <h2> If you can dream it you can make it! </h2>
-
 <p> Check out our gallery of professional designs created with Glowforge! </p>
+  </div>
 
 <ul>
 
-  <li class="img-1">
-    <img src="img/g2-1.jpg" alt="Circle">
+  <li class="img1">
+    <img class="large-images" src="img/g2-1.jpg" alt="Circle">
   </li>
 
-  <li class="img-2">
-    <img src="img/g2-2.jpg" alt="Wallet">
+  <li class="img2">
+    <img class="large-images" src="img/g2-2.jpg" alt="Wallet">
   </li>
 
-  <li class="img-3">
-    <img src="img/g2-3.jpg" alt="Green">
+  <li class="img3">
+    <img class="large-images" src="img/g2-3.jpg" alt="Green">
   </li>
 
-  <li class="img-4">
-    <img src="img/g2-4.jpg" alt="Blue">
+  <li class="img4">
+    <img class="large-images" src="img/g2-4.jpg" alt="Blue">
   </li>
 
-  <li class="img-5">
-    <img src="img/g2-5.jpg" alt="Map">
+  <li class="img5">
+    <img class="large-images" src="img/g2-5.jpg" alt="Map">
   </li>
 
 </ul>
@@ -217,11 +255,14 @@
 </section>
 
 <!-- Materials -->
+<section class="materials">
+  <div class="content">
 
-<section>
-
+    <div class="toparea">
 <h2> And with every purchase... comes a free collection of materials! </h2>
+    </div>
 
+    <div class="materialslist">
 <ul>
   <li> 
     <p> (1) 12x20 inch sheet of PlyWood  </p> 
@@ -240,19 +281,30 @@
   </li>
 
 </ul>
+</div>
+
+</div>
 
 </section>
 
 <!--Buy Now-->
 
-<section>
+<section class="buynow">
+  <div class="content">
 
+    <div class="title">
 <h2>Get your Glowforge Pro now!</h2>
+    </div>
 
-<img src="img/glowforge-bottom-image.jpg" alt="glowforge image">
+<div class="img">
+<img class="large-images" src="img/glowforge-bottom-image.jpg" alt="glowforge image">
+</div>
 
-<form action="#"> <button> Buy Now! </button> </form>
+<div class="button">
+<button> <a href="html/checkout.html"> Buy Now! </button>
+</div>
 
+</div>
 </section>
 
 <!-- Footer -->
@@ -261,6 +313,9 @@
   <div class="content">
 
     <div class="products">
+
+      <p> Products </p>
+
       <ul>
 
         <li>
@@ -279,11 +334,15 @@
     </div>
 
     <div class="contact">
+
+      <p> Contact </p>
       <p><a href="#"> hello@glowforge.com </a></p>
       <p><a href="#"> +1-888-8GLOWFORGE </a></p>
     </div>
 
     <div class="social-media">
+
+      <p> Social Media </p>
       <ul>
         <li>
           <a href="#"> <img class="fa-brands" src="img/google-icon.svg" alt="Google">
@@ -305,7 +364,7 @@
           </a>
         </li>
       </ul>
-
+</div>
 
       <div class="copyright">
         <ul>
@@ -327,7 +386,7 @@
         </ul>
       </div>
 
-    </div>
+    
 
 
   </div>

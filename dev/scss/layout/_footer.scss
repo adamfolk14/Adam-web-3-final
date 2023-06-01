@@ -1,3 +1,92 @@
 /* =============
     Footer
 ============= */
+
+footer{
+
+    background-color: $darkteal;
+    color: white;
+
+    .content{
+
+        form{
+            button{
+                background-color: rgb(113, 33, 204);
+            color: white;
+            border: none;
+            }
+        }
+
+        @include md{
+            display: grid;
+            grid-template-columns: 30% 30% 40%;
+            grid-template-areas:
+            "products contact social-media"
+            "copyright copyright copyright"
+            ;
+            }
+
+        @include lg{
+            grid-template-columns: 30% 30% 40%;
+            grid-template-areas:
+            "products contact social-media"
+            "copyright copyright copyright"
+            ;
+            }
+
+            .products{
+
+                @include md{
+                    grid-area: products;
+                }
+
+
+            }
+
+            .contact{
+
+                @include md{
+                    grid-area: contact;
+                }
+
+
+            }
+
+            .social-media{
+
+                @include md{
+                    grid-area: social-media;
+                }
+
+                ul li{
+
+                    display: inline-block;
+                }
+
+
+            }
+
+            .copyright{
+
+                @include md{
+                    grid-area: copyright;
+
+                    ul li{
+
+                    display: inline-block;
+                }
+
+                }
+
+                
+
+
+            }
+
+            a{
+                color: white;
+            }
+
+
+    }
+}

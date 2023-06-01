@@ -1,0 +1,74 @@
+/* =============
+    Gallery1
+============= */
+
+.gallery1{
+
+    ul{
+
+        list-style: none;
+        padding-left: 0;
+   
+
+        @include sm{
+            display: grid;
+            grid-template-columns: 50% auto;
+           
+            }  
+                
+        @include lg{
+            grid-template-columns: 16px 1fr 1fr 1fr 16px;
+            grid-template-areas:
+            ". g1 g2 g3 ." ;
+           
+            }    
+            
+        li{
+
+            &.img1{
+
+                @include lg{
+                    grid-area: g1;
+                }
+            }
+
+            &.img2{
+
+                @include lg{
+                    grid-area: g2;
+                }
+            }
+
+
+            &.img3{
+            
+                @include lg{
+                    grid-area: g3;
+                    
+                }
+            }
+
+
+
+
+        }
+
+
+
+
+       
+        } 
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+   
