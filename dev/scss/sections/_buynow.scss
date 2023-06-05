@@ -23,6 +23,8 @@ a{
 
         @include md{
 
+            width: 60%;
+        margin: auto;
         
         display: grid;
         grid-template-columns: 16px auto 16px;

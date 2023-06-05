@@ -12,79 +12,78 @@
 
   <body>
 
-    <!-- Header -->
+   <!-- Header -->
 
-    <header class="container">
+  <header class="container">
 
-      <div class="content">
-    
-      <div class="title"> 
-        <h2> Glowforge </h2>
-      </div>
-
-
-      <div class="menu">
+    <div class="content">
+  
+    <div class="title"> 
+      <h2> Glowforge </h2>
+    </div>
 
 
-              <!-- Mobile Nav Icon, Won't Display on Desktop & Up-->
+  <div class="menu">
+
+<!-- Mobile Nav Icon, Won't Display on Desktop & Up-->
 <div class="burger-container">
-  <button id="burger-btn">
-      <i class="fa-solid fa-bars"></i>
-  </button>
+<button id="burger-btn">
+    <img src="../img/menu-icon.svg">
+</button>
 </div>
 <!-- End Mobile Nav Icon -->
 
 <!-- Menu Alters Between Mobile/Tablet & Desktop-->
 <nav id="main-menu">
-  <div class="hide-for-lg">
-      <button id="close-btn">
-          <i class="fa-solid fa-xmark-large"></i>
-      </button> 
-      
-  </div>
-  <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../index.html">Features</a></li>
-      <li><a href="../index.html">Gallery</a></li>
-      <li><a href="../index.html">Reviews</a></li>
-  </ul>
+<div class="hide-for-lg">
+    <button id="close-btn">
+        <i class="fa-solid fa-xmark-large"></i>
+    </button> 
+</div>
+
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html">Features</a></li>
+    <li><a href="../index.html">Gallery</a></li>
+    <li><a href="../index.html">Reviews</a></li>
+</ul>
 </nav>
+
+</div>
 <!--End Nav -->
 
-  
-      </div>
-
-      <div class="search">
-        <form action="#">
-          <button> <img src="../img/search-icon.svg" alt="search icon"> </button>
-          <input type="text" placeholder="Search">
-        </form>
-      </div>
-
-      <div class="login">
-
-      <form> <button> Login </button> </form>
-
-      </div>
-
-      
-    </div>
     
-    </header>
+
+    <div class="search">
+      <form action="#">
+        <button> <img src="../img/search-icon.svg" alt="search icon"> </button>
+        <input type="text" placeholder="Search">
+      </form>
+    </div>
+
+    <div class="login">
+
+    <form> <button> Login </button> </form>
+
+    </div>
+
+    
+  </div>
+  
+  </header>
 
 <!-- Secondary Header -->
 
 <section class="header2">
-  <div class="content">
+<div class="content">
 
 <div class="buy">
-<form> <button> Buy Pro Now! </button> </form>
+<button> <a href="../html/checkout.html">Buy Pro Now!</a> </button>
 </div>
 
 <div class="cart">
-  <button> <img src="../img/cart-icon.svg" alt ="cart icon">  </button>
+<button> <img src="../img/cart-icon.svg" alt ="cart icon">  </button>
 </div>
-
 
 
 </div>
@@ -93,22 +92,32 @@
 
 <!--Receipt-->
 
-<section>
+<section class="receipt">
   <div class="content">
 
-    <div class="thank-you">
+    <div class="thankyou">
       <h1> Thank You!</h1>
-      <img src="../img/glowforge-bottom-image.jpg" alt="glowoforge image">
     </div>
 
-    <div class="Tracking">
+    <div class="img">
+      <img class="large-images" src="../img/glowforge-bottom-image.jpg" alt="glowforge image">
+    </div>
+
+    <div class="tracking">
       <h2> Glowforge Pro</h2>
-      <h3> Order #: 142-6143893-8613912 </h3>
+
+        <div class="ordernumber">
+          <h3> Order #: 142-6143893-8613912 </h3>
+        </div>
+
       <p>Your order has been made and should arrive on 2/15.
         Thank you for using Glowforge!
         Check your email for details on tracking!</p>
 
-        <form action="#"> <button> Continue Shopping </button> </form>
+        <div class="continue">
+          <button> <a href="../index.html"> Continue Shopping </a> </button>
+        </div>
+
     </div>
 
 
@@ -117,10 +126,14 @@
 
 
 <!-- Footer -->
+
 <footer class="container">
   <div class="content">
 
     <div class="products">
+
+      <p> Products </p>
+
       <ul>
 
         <li>
@@ -139,11 +152,15 @@
     </div>
 
     <div class="contact">
+
+      <p> Contact </p>
       <p><a href="#"> hello@glowforge.com </a></p>
       <p><a href="#"> +1-888-8GLOWFORGE </a></p>
     </div>
 
     <div class="social-media">
+
+      <p> Social Media </p>
       <ul>
         <li>
           <a href="#"> <img class="fa-brands" src="../img/google-icon.svg" alt="Google">
@@ -165,7 +182,7 @@
           </a>
         </li>
       </ul>
-
+</div>
 
       <div class="copyright">
         <ul>
@@ -187,7 +204,7 @@
         </ul>
       </div>
 
-    </div>
+    
 
 
   </div>

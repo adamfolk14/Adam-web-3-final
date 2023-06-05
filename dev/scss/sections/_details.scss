@@ -1,0 +1,51 @@
+/* =============
+    Details
+============= */
+
+.details{
+
+    .heading{
+
+        color: $darkteal;
+    }
+
+    
+    .content{
+
+
+
+
+        @include md{
+
+
+        display: grid;
+        grid-template-columns: 16px 1fr 1fr 16px;
+        grid-template-areas:
+        ". img features ."
+        ;
+
+        }
+
+        .img{
+            @include md{
+                width: 60%;
+            margin: auto;
+                grid-area: img;
+            }
+        
+        }
+
+        .features{
+
+            @include md{
+                grid-area: features;
+            }
+        
+        }
+
+    }
+
+}
+
+
+   

@@ -1,0 +1,84 @@
+/* =============
+    Payment
+============= */
+
+.payment{
+
+
+    .confirm{
+        
+        padding-bottom: 16px;
+    
+a{
+    color: white;
+    text-decoration: none;
+
+}
+        button{
+
+
+        background-color: $purple;
+        border: none;
+        padding: 4px;
+        }
+}
+
+
+    .custom-input {
+        background-color: $lightteal;
+        border: none;
+        padding: 4px;
+      }
+
+    .content{
+
+        text-align: center;
+
+        @include md{
+            width: 60%;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 16px auto 16px;
+            grid-template-areas:
+            ". method ."
+            ". shipping ."
+            ;
+            }
+
+
+            .method{
+
+                @include md{
+                    grid-area: method;
+                  
+                }
+                    ul li{
+
+                        display: inline-block;
+                    }
+
+
+            }
+
+            .shipping{
+
+                @include md{
+                    grid-area: shipping;
+
+                }
+                    ul li{
+
+                        padding: 8px;
+                        list-style: none;
+                        
+                    }
+                
+
+
+            }
+
+
+
+    }
+}

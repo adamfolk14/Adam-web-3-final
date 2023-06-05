@@ -578,13 +578,13 @@ footer .content form button {
 @media (min-width: 768px) {
   footer .content {
     display: grid;
-    grid-template-columns: 30% 30% 40%;
+    grid-template-columns: 25% 25% 50%;
     grid-template-areas: "products contact social-media" "copyright copyright copyright";
   }
 }
 @media (min-width: 992px) {
   footer .content {
-    grid-template-columns: 30% 30% 40%;
+    grid-template-columns: 25% 25% 50%;
     grid-template-areas: "products contact social-media" "copyright copyright copyright";
   }
 }
@@ -602,9 +602,9 @@ footer .content form button {
   footer .content .social-media {
     grid-area: social-media;
   }
-}
-footer .content .social-media ul li {
-  display: inline-block;
+  footer .content .social-media ul li {
+    display: inline-block;
+  }
 }
 @media (min-width: 768px) {
   footer .content .copyright {
@@ -639,6 +639,7 @@ footer .content a {
 .header2 .content .buy a {
   color: white;
   padding: 4px;
+  text-decoration: none;
 }
 @media (min-width: 768px) {
   .header2 .content .buy {
@@ -660,6 +661,8 @@ footer .content a {
 ============= */
 @media (min-width: 768px) {
   .hero .content {
+    width: 60%;
+    margin: auto;
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". title ." ". description ." ". img .";
@@ -773,10 +776,14 @@ footer .content a {
 .reviews .reviews-title {
   text-align: center;
 }
+.reviews .review-boxes {
+  width: 60%;
+  margin: auto;
+}
 @media (min-width: 576px) {
   .reviews .review-boxes {
     display: grid;
-    grid-template-columns: auto 250px auto;
+    grid-template-columns: 16px auto 16px;
     grid-template-areas: ". reviews .";
   }
 }
@@ -789,12 +796,17 @@ footer .content a {
 }
 @media (min-width: 992px) {
   .reviews .review-boxes {
-    grid-template-columns: auto 1120px auto;
+    grid-template-columns: 16px auto 16px;
   }
 }
 .reviews .review-boxes ul.review-grid {
   list-style: none;
   padding-left: 0;
+}
+@media (min-width: 576px) {
+  .reviews .review-boxes ul.review-grid {
+    grid-area: reviews;
+  }
 }
 @media (min-width: 768px) {
   .reviews .review-boxes ul.review-grid {
@@ -944,6 +956,8 @@ footer .content a {
 }
 @media (min-width: 768px) {
   .buynow .content {
+    width: 60%;
+    margin: auto;
     display: grid;
     grid-template-columns: 16px auto 16px;
     grid-template-areas: ". title ." ". img ." ". button .";
@@ -971,5 +985,130 @@ footer .content a {
 @media (min-width: 768px) {
   .buynow .content .button {
     grid-area: button;
+  }
+}
+
+/* =============
+    Details
+============= */
+.details .heading {
+  color: #4791A3;
+}
+@media (min-width: 768px) {
+  .details .content {
+    display: grid;
+    grid-template-columns: 16px 1fr 1fr 16px;
+    grid-template-areas: ". img features .";
+  }
+}
+@media (min-width: 768px) {
+  .details .content .img {
+    width: 60%;
+    margin: auto;
+    grid-area: img;
+  }
+}
+@media (min-width: 768px) {
+  .details .content .features {
+    grid-area: features;
+  }
+}
+
+/* =============
+    Payment
+============= */
+.payment .confirm {
+  padding-bottom: 16px;
+}
+.payment .confirm a {
+  color: white;
+  text-decoration: none;
+}
+.payment .confirm button {
+  background-color: #AD29D8;
+  border: none;
+  padding: 4px;
+}
+.payment .custom-input {
+  background-color: #ACC8CE;
+  border: none;
+  padding: 4px;
+}
+.payment .content {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .payment .content {
+    width: 60%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". method ." ". shipping .";
+  }
+}
+@media (min-width: 768px) {
+  .payment .content .method {
+    grid-area: method;
+  }
+}
+.payment .content .method ul li {
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  .payment .content .shipping {
+    grid-area: shipping;
+  }
+}
+.payment .content .shipping ul li {
+  padding: 8px;
+  list-style: none;
+}
+
+/* =============
+    Receipt
+============= */
+.receipt .continue {
+  padding-bottom: 16px;
+}
+.receipt .continue a {
+  color: white;
+  text-decoration: none;
+}
+.receipt .continue button {
+  background-color: #AD29D8;
+  border: none;
+  padding: 4px;
+}
+.receipt .ordernumber {
+  color: #8F8F8F;
+}
+@media (min-width: 768px) {
+  .receipt .content {
+    width: 60%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". thankyou ." ". img ." ". tracking .";
+  }
+}
+.receipt .content .thankyou {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .receipt .content .thankyou {
+    grid-area: thankyou;
+  }
+}
+@media (min-width: 768px) {
+  .receipt .content .img {
+    grid-area: img;
+  }
+}
+.receipt .content .tracking {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .receipt .content .tracking {
+    grid-area: tracking;
   }
 }

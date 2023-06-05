@@ -19,7 +19,7 @@ footer{
 
         @include md{
             display: grid;
-            grid-template-columns: 30% 30% 40%;
+            grid-template-columns: 25% 25% 50%;
             grid-template-areas:
             "products contact social-media"
             "copyright copyright copyright"
@@ -27,7 +27,7 @@ footer{
             }
 
         @include lg{
-            grid-template-columns: 30% 30% 40%;
+            grid-template-columns: 25% 25% 50%;
             grid-template-areas:
             "products contact social-media"
             "copyright copyright copyright"
@@ -56,12 +56,15 @@ footer{
 
                 @include md{
                     grid-area: social-media;
+
+
+
+                    ul li{
+
+                        display: inline-block;
+                    }
                 }
 
-                ul li{
-
-                    display: inline-block;
-                }
 
 
             }

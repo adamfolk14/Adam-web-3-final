@@ -12,76 +12,78 @@
 
   <body>
 
-     <!-- Header -->
+  <!-- Header -->
 
-     <header class="container">
+  <header class="container">
 
-      <div class="content">
-    
-      <div class="title"> 
-        <h2> Glowforge </h2>
-      </div>
+    <div class="content">
+  
+    <div class="title"> 
+      <h2> Glowforge </h2>
+    </div>
 
 
-      <div class="menu">
+  <div class="menu">
 
-        <!-- Mobile Nav Icon, Won't Display on Desktop & Up-->
+<!-- Mobile Nav Icon, Won't Display on Desktop & Up-->
 <div class="burger-container">
-  <button id="burger-btn">
-      <i class="fa-solid fa-bars"></i>
-  </button>
+<button id="burger-btn">
+    <img src="../img/menu-icon.svg">
+</button>
 </div>
 <!-- End Mobile Nav Icon -->
 
 <!-- Menu Alters Between Mobile/Tablet & Desktop-->
 <nav id="main-menu">
-  <div class="hide-for-lg">
-      <button id="close-btn">
-          <i class="fa-solid fa-xmark-large"></i>
-      </button> 
-      
-  </div>
-  <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../index.html">Features</a></li>
-      <li><a href="../index.html">Gallery</a></li>
-      <li><a href="../index.html">Reviews</a></li>
-  </ul>
+<div class="hide-for-lg">
+    <button id="close-btn">
+        <i class="fa-solid fa-xmark-large"></i>
+    </button> 
+</div>
+
+<ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html">Features</a></li>
+    <li><a href="../index.html">Gallery</a></li>
+    <li><a href="../index.html">Reviews</a></li>
+</ul>
 </nav>
+
+</div>
 <!--End Nav -->
-      </div>
 
-      <div class="search">
-        <form action="#">
-          <button> <img src="../img/search-icon.svg" alt="search icon"> </button>
-          <input type="text" placeholder="Search">
-        </form>
-      </div>
-
-      <div class="login">
-
-      <form> <button> Login </button> </form>
-
-      </div>
-
-      
-    </div>
     
-    </header>
+
+    <div class="search">
+      <form action="#">
+        <button> <img src="../img/search-icon.svg" alt="search icon"> </button>
+        <input type="text" placeholder="Search">
+      </form>
+    </div>
+
+    <div class="login">
+
+    <form> <button> Login </button> </form>
+
+    </div>
+
+    
+  </div>
+  
+  </header>
 
 <!-- Secondary Header -->
 
 <section class="header2">
-  <div class="content">
+<div class="content">
 
-<!-- <div class="buy">
-<form> <button> Buy Pro Now! </button> </form>
-</div> -->
-
-<div class="cart">
-  <button> <img src="../img/cart-icon.svg" alt ="cart icon">  </button>
+<div class="buy">
+<!-- <button> <a href="#">Buy Pro Now!</a> </button> -->
 </div>
 
+<div class="cart">
+<button> <img src="../img/cart-icon.svg" alt ="cart icon">  </button>
+</div>
 
 
 </div>
@@ -89,23 +91,23 @@
 
 
 <!-- Details -->
-<section>
+<section class="details">
   <div class="content">
 
-    <div class="image">
+    <div class="img">
 
-      <img src="../img/glowforge-bottom-image.jpg" alt="glowforge image">
-
-    </div>
-
-    <div class="label">
-
-      <h2> Glowforge Pro</h2>
-      <p> 6,995.00$ </p>
+      <img class="large-images" src="../img/glowforge-bottom-image.jpg" alt="glowforge image">
 
     </div>
+
 
     <div class="features">
+
+      <div class="heading">
+      <h1> Glowforge Pro</h1>
+      <h2> 6,995.00$ </h2>
+      </div>
+
       <p> Features </p>
       <ul>
         <li>
@@ -128,12 +130,12 @@
 </section>
 
 <!-- Payment -->
-<section>
+<section class="payment">
   <div class="content">
 
     
     <div class="method">
-      <h2> Select Payment Mehtod</h2>
+      <h2> Select Payment Method</h2>
 
       <ul>
         <li>
@@ -160,14 +162,19 @@
 
 
     <div class="shipping">
-      <form action="#">
-        <input type="text" placeholder="Email">
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="text" placeholder="Adress">
+      
+      <ul>
+        <li> <input type="text" class="custom-input" placeholder="Email"> </li>
+        <li> <input type="text" class="custom-input" placeholder="First Name"> </li>
+        <li> <input type="text" class="custom-input" placeholder="Last Name"> </li>
+        <li> <input type="text" class="custom-input" placeholder="Adress"> </li>
+      </ul>
 
-        <button> <a href="html/thankyou.html"> </a>Confirm </button>
-      </form>
+      <div class="confirm">
+        <button> <a href="../html/thankyou.html"> Confirm </a> </button>
+      </div>
+
+      
     </div>
 
     
@@ -175,10 +182,14 @@
 </section>
 
 <!-- Footer -->
+
 <footer class="container">
   <div class="content">
 
     <div class="products">
+
+      <p> Products </p>
+
       <ul>
 
         <li>
@@ -197,11 +208,15 @@
     </div>
 
     <div class="contact">
+
+      <p> Contact </p>
       <p><a href="#"> hello@glowforge.com </a></p>
       <p><a href="#"> +1-888-8GLOWFORGE </a></p>
     </div>
 
     <div class="social-media">
+
+      <p> Social Media </p>
       <ul>
         <li>
           <a href="#"> <img class="fa-brands" src="../img/google-icon.svg" alt="Google">
@@ -223,7 +238,7 @@
           </a>
         </li>
       </ul>
-
+</div>
 
       <div class="copyright">
         <ul>
@@ -245,7 +260,7 @@
         </ul>
       </div>
 
-    </div>
+    
 
 
   </div>

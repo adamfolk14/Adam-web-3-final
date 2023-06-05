@@ -28,12 +28,18 @@ text-align: center;
 
     .review-boxes{
  
+
+        width: 60%;
+        margin: auto;
+
+
         @include sm{
 
+            
         
             display: grid;
             
-            grid-template-columns: auto 250px auto;
+            grid-template-columns: 16px auto 16px;
             grid-template-areas:
             ". reviews ."
         ;
@@ -51,14 +57,20 @@ text-align: center;
  
  
         @include lg{
-            grid-template-columns: auto 1120px auto;
+            grid-template-columns: 16px auto 16px;
         }
  
+        
  
         ul.review-grid{
             list-style: none;
             padding-left: 0;
  
+
+            @include sm{
+
+                grid-area: reviews;
+            }
  
  
             @include md{

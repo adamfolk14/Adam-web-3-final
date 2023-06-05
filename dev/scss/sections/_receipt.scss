@@ -1,8 +1,32 @@
 /* =============
-    Hero
+    Receipt
 ============= */
 
-.hero{
+.receipt{
+
+    .continue{
+        
+        padding-bottom: 16px;
+    
+    a{
+    color: white;
+    text-decoration: none;
+
+    }
+        button{
+
+
+        background-color: $purple;
+        border: none;
+        padding: 4px;
+        }
+}
+
+.ordernumber{
+
+color: $lightgrey;
+
+}
 
     .content{
 
@@ -15,29 +39,18 @@
         display: grid;
         grid-template-columns: 16px auto 16px;
         grid-template-areas:
-        ". title ."
-        ". description ."
+        ". thankyou ."
         ". img ."
+        ". tracking ."
         ;
 
         }
 
-        .title{
-            color: $darkteal;
+        .thankyou{
             @include md{
-                grid-area: title;
+                grid-area: thankyou;
             }
             text-align: center;
-        
-        }
-
-        .description{
-
-            @include md{
-                grid-area: description;
-            }
-            text-align: center;
-        
         
         }
 
@@ -45,6 +58,15 @@
 
             @include md{
                 grid-area: img;
+            }
+        
+        
+        }
+
+        .tracking{
+
+            @include md{
+                grid-area: tracking;
             }
         text-align: center;
         
