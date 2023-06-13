@@ -8,21 +8,32 @@ header{
     .content{
 
 
-    @include sm{
+   /* @include sm{
         display: grid;
         grid-template-columns: 50% auto;
         grid-template-areas:
         "locations newsletter"
         "locations follow"
         ;
-        }
+        } */
+
+        
+
+        
+        
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+            "title menu search login"
+            ;
+             
 
 
 
     @include md{
         
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas:
         "title menu search login"
         ;
@@ -57,7 +68,12 @@ header{
 
 
 .title{
+    
+    a{
+        text-decoration: none;
+    }
 
+    
     color: white;
     @include md{
         grid-area: title;
@@ -68,12 +84,15 @@ header{
 
 .menu{
 
+    padding-top: 8px;
+    padding-bottom: 8px;
+
     @include md{
         grid-area: menu;
     }
 
     ul li{
-
+        
         display: inline-block;
     }
 
@@ -82,24 +101,32 @@ header{
 
 .search{
 
-
+    
     @include md{
         grid-area: search;
     }
 
     form{
 
+        display:flex;
+    justify-content: flex-end;
+    
+        padding-left: 32px;
+        padding-top: 16px;
+        
         display: flex;
 
         input{
             color: black;
             font-size: 16px;
             width: 100%;
-
+            border: none;
+            border-top-right-radius: 24px;
+            border-bottom-right-radius: 24px;
 
 
         @include md{
-            font-size: 35px;
+            font-size: 16px;
         }
 
 
@@ -113,6 +140,9 @@ header{
 
         button{
 
+        border-top-left-radius: 24px;
+        border-bottom-left-radius: 24px;
+        background-color: white;
         border: none;
         padding-top: 6px;
         
@@ -124,16 +154,30 @@ header{
 }
 
 .login{
+    
+    
 
+    padding-left: 24px;
+
+    padding-top: 20px;
+    
     button{
-
+        
+        border-radius: 24px;
         border: none;
+        padding: 8px;
         
     }
-    padding-left: 40px;
 
     @include md{
         grid-area: login;
+        
+    }
+
+    @include xl{
+
+        display:flex;
+    justify-content: flex-end;
     }
 
 

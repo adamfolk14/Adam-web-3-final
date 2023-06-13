@@ -19,7 +19,7 @@
     <div class="content">
   
     <div class="title"> 
-      <h2> Glowforge </h2>
+      <a href="../index.html"> <h2> Glowforge </h2> </a>
     </div>
 
 
@@ -28,7 +28,7 @@
 <!-- Mobile Nav Icon, Won't Display on Desktop & Up-->
 <div class="burger-container">
 <button id="burger-btn">
-    <img src="../img/menu-icon.svg">
+    <img src="../img/menu-icon.svg" alt="menu icon">
 </button>
 </div>
 <!-- End Mobile Nav Icon -->
@@ -108,7 +108,7 @@
       <h2> 6,995.00$ </h2>
       </div>
 
-      <p> Features </p>
+      <p> Features: </p>
       <ul>
         <li>
           <p>Ability to cut very strong materials such as titanium and marble</p>
@@ -139,7 +139,7 @@
 
       <ul>
         <li>
-          <a href="#"><img src="../img/paypal.svg" alt="paypal">
+          <a href="#"><img src="../img/paypal-fixed-width.svg" alt="paypal">
           </a>
         </li>
 
@@ -149,12 +149,12 @@
         </li>
 
         <li>
-          <a href="#"><img src="../img/visa.svg" alt="visa">
+          <a href="#"><img src="../img/visa-fixed-width.svg" alt="visa">
           </a>
         </li>
 
         <li>
-          <a href="#"><img src="../img/apple-pay.svg" alt="apple pay">
+          <a href="#"><img src="../img/apple-pay-fixed-width.svg" alt="apple pay">
           </a>
         </li>
       </ul>
@@ -163,16 +163,26 @@
 
     <div class="shipping">
       
-      <ul>
+      <!-- <ul>
         <li> <input type="text" class="custom-input" placeholder="Email"> </li>
         <li> <input type="text" class="custom-input" placeholder="First Name"> </li>
         <li> <input type="text" class="custom-input" placeholder="Last Name"> </li>
         <li> <input type="text" class="custom-input" placeholder="Adress"> </li>
-      </ul>
+      </ul> -->
 
-      <div class="confirm">
+      <form action="../html/thankyou.html">
+        
+        <input type="text" class="custom-input email" placeholder="Email"> 
+         <input type="text" class="custom-input first" placeholder="First Name"> 
+         <input type="text" class="custom-input last" placeholder="Last Name"> 
+         <input type="text" class="custom-input address" placeholder="Address"> 
+         <button class="confirm"> Confirm </button>
+
+      </form>
+
+     <!--  <div class="confirm">
         <button> <a href="../html/thankyou.html"> Confirm </a> </button>
-      </div>
+      </div> -->
 
       
     </div>
@@ -243,7 +253,7 @@
       <div class="copyright">
         <ul>
           <li>
-            <p>© Copyright 2023. Glowforge, Inc., All Rights Reserved.</p>
+            <p class="blacktext">© Copyright 2023. Glowforge, Inc., All Rights Reserved.</p>
           </li>
 
           <li>

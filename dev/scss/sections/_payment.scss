@@ -5,11 +5,11 @@
 .payment{
 
 
-    .confirm{
+    /* .confirm{
         
         padding-bottom: 16px;
     
-a{
+form{
     color: white;
     text-decoration: none;
 
@@ -21,11 +21,11 @@ a{
         border: none;
         padding: 4px;
         }
-}
+} */
 
 
     .custom-input {
-        background-color: $lightteal;
+        background-color: $paleteal;
         border: none;
         padding: 4px;
       }
@@ -54,7 +54,7 @@ a{
                   
                 }
                     ul li{
-
+                        margin: 8px;
                         display: inline-block;
                     }
 
@@ -62,8 +62,9 @@ a{
             }
 
             .shipping{
+                padding-bottom: 38px;
 
-                @include md{
+               @include md{
                     grid-area: shipping;
 
                 }
@@ -72,6 +73,57 @@ a{
                         padding: 8px;
                         list-style: none;
                         
+                    } 
+
+                    form{
+
+                        button{
+
+                            color: white;
+                            background-color: $purple;
+                            border: none;
+                            border-radius: 24px;
+                            padding: 4px;
+                        }
+
+
+
+                        display: grid;
+                        gap: 20px;
+                        padding-bottom: 20px;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-areas: 
+                        "email email"
+                        "first last"
+                        "address address"
+                        "confirm confirm";
+
+                        .email{
+                            grid-area: email;
+                        }
+
+                        .first{
+                            grid-area: first;
+                        }
+
+                        .last{
+                            grid-area: last;
+                        }
+
+                        .address{
+                            grid-area: address;
+                        }
+
+                        .confirm{
+                            grid-area: confirm;
+                            width: 20%;
+                            margin: auto;
+                            
+
+                            
+                        }
+
+
                     }
                 
 

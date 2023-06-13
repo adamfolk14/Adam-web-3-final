@@ -7,15 +7,20 @@ footer{
     background-color: $darkteal;
     color: white;
 
+    .blacktext{
+
+        color: black;
+    }
+
     .content{
 
-        form{
+      /*  form{
             button{
                 background-color: rgb(113, 33, 204);
             color: white;
             border: none;
             }
-        }
+        } */
 
         @include md{
             display: grid;
@@ -53,6 +58,7 @@ footer{
             }
 
             .social-media{
+                
 
                 @include md{
                     grid-area: social-media;
@@ -60,7 +66,7 @@ footer{
 
 
                     ul li{
-
+                        margin: 4px;
                         display: inline-block;
                     }
                 }
@@ -75,7 +81,7 @@ footer{
                     grid-area: copyright;
 
                     ul li{
-
+                    margin: 16px;
                     display: inline-block;
                 }
 

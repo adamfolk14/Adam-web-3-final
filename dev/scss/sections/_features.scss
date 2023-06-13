@@ -3,7 +3,7 @@
 ============= */
 
 .features{
-
+    padding-bottom: 64px;
     .content{
 
         
@@ -32,6 +32,7 @@
         color: white;
         background-color: $darkteal;
         padding: 8px;
+        border-radius: 24px;
 
         @include lg{
             

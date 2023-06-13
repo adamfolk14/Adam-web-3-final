@@ -387,6 +387,7 @@ textarea {
 ============= */
 nav {
   display: none;
+  border-radius: 24px;
   background-color: #000;
   height: 100vh;
   padding: 16px;
@@ -418,14 +419,15 @@ nav div button:hover {
   cursor: pointer;
 }
 nav ul {
-  height: 100%;
+  height: 50%;
   padding-top: 20%;
+  padding-right: 8px;
 }
 @media (min-width: 992px) {
   nav ul {
-    align-items: center;
+    align-items: start;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     padding-top: 0;
   }
 }
@@ -472,17 +474,23 @@ nav ul li:first-child {
 header {
   background-color: #4791A3;
 }
-@media (min-width: 576px) {
-  header .content {
-    display: grid;
-    grid-template-columns: 50% auto;
-    grid-template-areas: "locations newsletter" "locations follow";
-  }
+header .content {
+  /* @include sm{
+       display: grid;
+       grid-template-columns: 50% auto;
+       grid-template-areas:
+       "locations newsletter"
+       "locations follow"
+       ;
+       } */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "title menu search login";
 }
 @media (min-width: 768px) {
   header .content {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "title menu search login";
   }
 }
@@ -509,10 +517,17 @@ header .content .burger-container button:hover {
 header .content .title {
   color: white;
 }
+header .content .title a {
+  text-decoration: none;
+}
 @media (min-width: 768px) {
   header .content .title {
     grid-area: title;
   }
+}
+header .content .menu {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 @media (min-width: 768px) {
   header .content .menu {
@@ -529,15 +544,22 @@ header .content .menu ul li {
 }
 header .content .search form {
   display: flex;
+  justify-content: flex-end;
+  padding-left: 32px;
+  padding-top: 16px;
+  display: flex;
 }
 header .content .search form input {
   color: black;
   font-size: 16px;
   width: 100%;
+  border: none;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
 }
 @media (min-width: 768px) {
   header .content .search form input {
-    font-size: 35px;
+    font-size: 16px;
   }
 }
 header .content .search form ::placeholder {
@@ -545,18 +567,30 @@ header .content .search form ::placeholder {
   opacity: 1;
 }
 header .content .search form button {
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  background-color: white;
   border: none;
   padding-top: 6px;
 }
 header .content .login {
-  padding-left: 40px;
+  padding-left: 24px;
+  padding-top: 20px;
 }
 header .content .login button {
+  border-radius: 24px;
   border: none;
+  padding: 8px;
 }
 @media (min-width: 768px) {
   header .content .login {
     grid-area: login;
+  }
+}
+@media (min-width: 1200px) {
+  header .content .login {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 header .content a {
@@ -570,10 +604,17 @@ footer {
   background-color: #4791A3;
   color: white;
 }
-footer .content form button {
-  background-color: rgb(113, 33, 204);
-  color: white;
-  border: none;
+footer .blacktext {
+  color: black;
+}
+footer .content {
+  /*  form{
+        button{
+            background-color: rgb(113, 33, 204);
+        color: white;
+        border: none;
+        }
+    } */
 }
 @media (min-width: 768px) {
   footer .content {
@@ -603,6 +644,7 @@ footer .content form button {
     grid-area: social-media;
   }
   footer .content .social-media ul li {
+    margin: 4px;
     display: inline-block;
   }
 }
@@ -611,6 +653,7 @@ footer .content form button {
     grid-area: copyright;
   }
   footer .content .copyright ul li {
+    margin: 16px;
     display: inline-block;
   }
 }
@@ -624,6 +667,18 @@ footer .content a {
 .header2 {
   background-color: #5AB5CB;
 }
+.header2 .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: ". buy cart";
+}
+@media (min-width: 576px) {
+  .header2 .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". buy cart";
+  }
+}
 @media (min-width: 768px) {
   .header2 .content {
     display: grid;
@@ -631,20 +686,29 @@ footer .content a {
     grid-template-areas: ". buy cart";
   }
 }
-.header2 .content .buy button {
-  background-color: #AD29D8;
-  border: none;
-  padding: 4px;
+.header2 .content .buy {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .header2 .content .buy a {
   color: white;
-  padding: 4px;
+  padding: 8px;
   text-decoration: none;
+  background-color: #AD29D8;
+  border-radius: 24px;
+  border: none;
 }
 @media (min-width: 768px) {
   .header2 .content .buy {
     grid-area: buy;
   }
+}
+.header2 .content .cart {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
 }
 .header2 .content .cart button {
   border: none;
@@ -697,6 +761,9 @@ footer .content a {
 /* =============
     Gallery1
 ============= */
+.gallery1 {
+  padding-bottom: 64px;
+}
 .gallery1 ul {
   list-style: none;
   padding-left: 0;
@@ -732,6 +799,9 @@ footer .content a {
 /* =============
     Features
 ============= */
+.features {
+  padding-bottom: 64px;
+}
 @media (min-width: 992px) {
   .features .content {
     padding-left: 20%;
@@ -752,6 +822,7 @@ footer .content a {
   color: white;
   background-color: #4791A3;
   padding: 8px;
+  border-radius: 24px;
 }
 @media (min-width: 992px) {
   .features .content .featureslist {
@@ -765,13 +836,8 @@ footer .content a {
 /* =============
     Reviews
 ============= */
-.reviews form {
-  padding-left: 16px;
-}
-.reviews form button {
-  background-color: #5AB5CB;
-  color: white;
-  border: none;
+.reviews {
+  padding-bottom: 64px;
 }
 .reviews .reviews-title {
   text-align: center;
@@ -784,14 +850,14 @@ footer .content a {
   .reviews .review-boxes {
     display: grid;
     grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". reviews .";
+    grid-template-areas: ". reviews ." ". seemore .";
   }
 }
 @media (min-width: 768px) {
   .reviews .review-boxes {
     display: grid;
     grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". reviews .";
+    grid-template-areas: ". reviews . " ". seemore .";
   }
 }
 @media (min-width: 992px) {
@@ -831,6 +897,8 @@ footer .content a {
   padding-top: 16px;
   padding-right: 8px;
   padding-left: 8px;
+  border-right: 4px solid white;
+  border-left: 4px solid white;
   background-color: #5AB5CB;
 }
 @media (min-width: 768px) {
@@ -842,6 +910,8 @@ footer .content a {
   padding-top: 16px;
   padding-left: 8px;
   padding-right: 8px;
+  border-right: 4px solid white;
+  border-left: 4px solid white;
   background-color: #5AB5CB;
 }
 @media (min-width: 768px) {
@@ -853,6 +923,8 @@ footer .content a {
   padding-top: 16px;
   padding-left: 8px;
   padding-right: 8px;
+  border-right: 4px solid white;
+  border-left: 4px solid white;
   background-color: #5AB5CB;
 }
 @media (min-width: 768px) {
@@ -860,10 +932,24 @@ footer .content a {
     grid-area: r3;
   }
 }
+.reviews .review-boxes .seemore {
+  grid-area: seemore;
+  padding-left: 4px;
+}
+.reviews .review-boxes .seemore form button {
+  background-color: #5AB5CB;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 24px;
+}
 
 /* =============
     Gallery2
 ============= */
+.gallery2 {
+  padding-bottom: 64px;
+}
 .gallery2 .text {
   text-align: center;
 }
@@ -912,6 +998,9 @@ footer .content a {
 /* =============
     Materials
 ============= */
+.materials {
+  padding-bottom: 64px;
+}
 @media (min-width: 992px) {
   .materials .content {
     padding-left: 20%;
@@ -932,6 +1021,7 @@ footer .content a {
   color: white;
   background-color: #4791A3;
   padding: 8px;
+  border-radius: 24px;
 }
 @media (min-width: 992px) {
   .materials .content .materialslist {
@@ -945,22 +1035,13 @@ footer .content a {
 /* =============
     Buy Now
 ============= */
-.buynow button {
-  background-color: #AD29D8;
-  border: none;
-  padding: 4px;
-}
-.buynow a {
-  color: white;
-  padding: 4px;
-}
 @media (min-width: 768px) {
   .buynow .content {
     width: 60%;
     margin: auto;
     display: grid;
     grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". title ." ". img ." ". button .";
+    grid-template-areas: ". title ." ". img ." ". buybutton .";
   }
 }
 .buynow .content .title {
@@ -979,12 +1060,24 @@ footer .content a {
     grid-area: img;
   }
 }
-.buynow .content .button {
+.buynow .content .buybutton {
   text-align: center;
+  padding-bottom: 64px;
+}
+.buynow .content .buybutton a {
+  background-color: #AD29D8;
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 24px;
+  color: white;
+  text-decoration: none;
 }
 @media (min-width: 768px) {
-  .buynow .content .button {
-    grid-area: button;
+  .buynow .content .buybutton {
+    grid-area: buybutton;
   }
 }
 
@@ -1017,20 +1110,27 @@ footer .content a {
 /* =============
     Payment
 ============= */
-.payment .confirm {
-  padding-bottom: 16px;
-}
-.payment .confirm a {
-  color: white;
-  text-decoration: none;
-}
-.payment .confirm button {
-  background-color: #AD29D8;
-  border: none;
-  padding: 4px;
+.payment {
+  /* .confirm{
+
+          padding-bottom: 16px;
+
+  form{
+      color: white;
+      text-decoration: none;
+
+  }
+          button{
+
+
+          background-color: $purple;
+          border: none;
+          padding: 4px;
+          }
+  } */
 }
 .payment .custom-input {
-  background-color: #ACC8CE;
+  background-color: #DCE8EA;
   border: none;
   padding: 4px;
 }
@@ -1052,7 +1152,11 @@ footer .content a {
   }
 }
 .payment .content .method ul li {
+  margin: 8px;
   display: inline-block;
+}
+.payment .content .shipping {
+  padding-bottom: 38px;
 }
 @media (min-width: 768px) {
   .payment .content .shipping {
@@ -1063,21 +1167,55 @@ footer .content a {
   padding: 8px;
   list-style: none;
 }
+.payment .content .shipping form {
+  display: grid;
+  gap: 20px;
+  padding-bottom: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "email email" "first last" "address address" "confirm confirm";
+}
+.payment .content .shipping form button {
+  color: white;
+  background-color: #AD29D8;
+  border: none;
+  border-radius: 24px;
+  padding: 4px;
+}
+.payment .content .shipping form .email {
+  grid-area: email;
+}
+.payment .content .shipping form .first {
+  grid-area: first;
+}
+.payment .content .shipping form .last {
+  grid-area: last;
+}
+.payment .content .shipping form .address {
+  grid-area: address;
+}
+.payment .content .shipping form .confirm {
+  grid-area: confirm;
+  width: 20%;
+  margin: auto;
+}
 
 /* =============
     Receipt
 ============= */
 .receipt .continue {
-  padding-bottom: 16px;
+  padding-top: 36px;
+  padding-bottom: 64px;
 }
 .receipt .continue a {
   color: white;
   text-decoration: none;
-}
-.receipt .continue button {
   background-color: #AD29D8;
   border: none;
-  padding: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 24px;
 }
 .receipt .ordernumber {
   color: #8F8F8F;
@@ -1092,6 +1230,7 @@ footer .content a {
   }
 }
 .receipt .content .thankyou {
+  color: #4791A3;
   text-align: center;
 }
 @media (min-width: 768px) {

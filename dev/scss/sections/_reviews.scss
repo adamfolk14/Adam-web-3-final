@@ -3,21 +3,7 @@
 ============= */
 
 .reviews{
-
-    form{
- 
-        padding-left: 16px;
- 
-        button{
-
-
-            background-color: $teal;
-        color: white;
-        border: none;
-        }
-    }
-
-
+    padding-bottom: 64px;
 
     .reviews-title{
 
@@ -28,7 +14,6 @@ text-align: center;
 
     .review-boxes{
  
-
         width: 60%;
         margin: auto;
 
@@ -42,6 +27,7 @@ text-align: center;
             grid-template-columns: 16px auto 16px;
             grid-template-areas:
             ". reviews ."
+            ". seemore ."
         ;
         }
 
@@ -50,7 +36,8 @@ text-align: center;
             
             grid-template-columns: 16px auto 16px;
             grid-template-areas:
-            ". reviews ."
+            ". reviews . "
+            ". seemore ."
         ;
         }
  
@@ -113,7 +100,9 @@ text-align: center;
             padding-top: 16px;
             padding-right: 8px;
             padding-left: 8px;
-            background-color: $teal ;
+            border-right: 4px solid white;
+            border-left: 4px solid white;
+            background-color: $teal;
  
  
             @include md{
@@ -129,6 +118,8 @@ text-align: center;
             padding-top: 16px;
             padding-left: 8px;
             padding-right: 8px;
+            border-right: 4px solid white;
+            border-left: 4px solid white;
             background-color: $teal ;
  
  
@@ -145,6 +136,8 @@ text-align: center;
             padding-top: 16px;
             padding-left: 8px;
             padding-right: 8px;
+            border-right: 4px solid white;
+            border-left: 4px solid white;
             background-color: $teal ;
  
  
@@ -164,8 +157,35 @@ text-align: center;
     }
  
  
+    .seemore{
+
+        grid-area: seemore;
+        padding-left: 4px;
+       
+        form{
+     
+           // padding-left: 25%;
+            button{
+    
+    
+                background-color: $teal;
+            color: white;
+            border: none;
+            padding: 6px;
+            border-radius: 24px;
+            }
+        }
+    
+    }
  
- 
+
+
+
+
+
+
  }
+
+ 
  }
  

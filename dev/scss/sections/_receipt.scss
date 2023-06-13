@@ -6,20 +6,22 @@
 
     .continue{
         
-        padding-bottom: 16px;
+        padding-top: 36px;
+        padding-bottom: 64px;
     
     a{
     color: white;
     text-decoration: none;
+    background-color: $purple;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 24px;
 
     }
-        button{
 
-
-        background-color: $purple;
-        border: none;
-        padding: 4px;
-        }
 }
 
 .ordernumber{
@@ -47,6 +49,7 @@ color: $lightgrey;
         }
 
         .thankyou{
+            color: $darkteal;
             @include md{
                 grid-area: thankyou;
             }

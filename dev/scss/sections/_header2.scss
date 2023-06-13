@@ -3,30 +3,56 @@
 ============= */
 
 .header2{
-
+    
     background-color: $teal;
     .content{
-        @include md{
+
+       
+
+        display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+            ". buy cart"
+            ;
+            
+
+        @include sm{
         
             display: grid;
-            grid-template-columns: 60% 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             grid-template-areas:
             ". buy cart"
             ;
             }
 
+            @include md{
+        
+                display: grid;
+                grid-template-columns: 60% 1fr 1fr;
+                grid-template-areas:
+                ". buy cart"
+                ;
+                }
+
+
+
             .buy{
 
-                button{
-                    background-color: $purple;
-                        border: none;
-                        padding: 4px;
-                    }
+                display:flex;
+    justify-content: flex-end;
+
+                padding-top: 12px;
+                padding-bottom: 12px;
+
+               
                     
                     a{
                         color: white;
-                        padding: 4px;
+                        padding: 8px;
                         text-decoration: none;
+                        background-color: $purple;
+                        border-radius: 24px;
+                        border: none;
                     }
 
                 @include md{
@@ -37,7 +63,9 @@
             }
 
             .cart{
-
+                display:flex;
+                justify-content: flex-end;
+                padding-right: 100px;
 
                 button{
 
